@@ -1,0 +1,15 @@
+
+<div class="row row-cols-1 row-cols-md-6">
+    <div class="col mb-4" *ngFor='let brand of brands'>
+        <div class="card h-100" (click)="SingleBrand(brand)">
+            <img src="{{brand.image}}" class="card-img-top" alt="...">
+            <h6>{{brand.name}}</h6>
+        </div>
+    </div>
+</div>
+
+<div id="buttons" class="container">
+    <a routerLink="/brands/add"><button id="add" class="btn btn-primary">Add</button></a>
+    <a routerLink="/brands/edit"><button id="edit" class="btn btn-primary">Edit</button></a>
+    <a routerLink="/brands/delete"><button id="delete" class="btn btn-danger">Delete</button></a>
+</div>

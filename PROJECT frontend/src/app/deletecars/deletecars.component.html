@@ -1,0 +1,11 @@
+<h3>Select model to delete:</h3>
+<div class="row row-cols-1 row-cols-md-6">
+    <div class="col mb-4" *ngFor='let car of cars'>
+        <div class="card h-100" (click)="confirm(car)">
+            <img src="{{car.image}}" class="card-img-top" alt="...">
+            <!-- <a routerClass="/cars/delete" class="stretched-link" (click)="delete(car)"> -->
+                <h6>{{car.name}}</h6>
+            <!-- </a> -->
+        </div>
+    </div>
+</div>

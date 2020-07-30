@@ -1,0 +1,12 @@
+<h3>Select brand to delete:</h3>
+<div class="row row-cols-1 row-cols-md-6">
+    <div class="col mb-4" *ngFor='let brand of brands'>
+        <div class="card h-100" (click)="confirm(brand)">
+            <img src="{{brand.image}}" class="card-img-top" alt="...">
+            <!-- <a routerLink="/brands" class="stretched-link"> -->
+                <h6>{{brand.name}}</h6>
+            <!-- </a> -->
+            <!-- <button class="btn btn-danger btn-sm" (click)="delete(brand)">Delete</button> -->
+        </div>
+    </div>
+</div>

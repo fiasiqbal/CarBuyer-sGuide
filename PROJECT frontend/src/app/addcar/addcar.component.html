@@ -1,0 +1,58 @@
+<div class='card'>
+    <form ngNativeValidate (ngSubmit)="AddCar()">
+        <div class="card-header">
+            <h4>Add Car</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    
+                    <tbody>
+                        <tr>
+                            <td><label for="">Brand Name</label></td>
+                            <td>
+                                <select name="brand" required [(ngModel)]="car.brand">
+                                    <option *ngFor='let brand of brands' value="{{brand.name}}">{{brand.name}}</option>
+                                </select>
+                                Your brand not in the list? <a routerLink="/brands/add">Click here</a> to create a new brand
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Model Name</label></td>
+                            <td><input type="text" name="name" required [(ngModel)]="car.name"></td>
+                        </tr>
+                        <!-- <tr>
+                            <td><label for="">Price</label></td>
+                            <td><input type="number" name="price" required [(ngModel)]="car.price"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Fuel Economy</label></td>
+                            <td><input type="number" name="mileage" required [(ngModel)]="car.mileage"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Fuel Options</label></td>
+                            <td><input type="text" name="fuel" required [(ngModel)]="car.fuel"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Engine Capacity</label></td>
+                            <td><input type="number" name="engine" required [(ngModel)]="car.engine"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Transmission Options</label></td>
+                            <td><input type="text" name="transmission" required [(ngModel)]="car.transmission"></td>
+                        </tr> -->
+                        <tr>
+                            <td><label for="">Car Image Url</label></td>
+                            <td><input type="url" name="image" required [(ngModel)]="car.image"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

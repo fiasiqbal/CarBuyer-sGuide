@@ -1,0 +1,29 @@
+<div class='card'>
+    <form ngNativeValidate (ngSubmit)="AddBrand()">
+        <div class="card-header">
+            <h4>Add Brand</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    
+                    <tbody>
+                        <tr>
+                            <td><label for="">Brand Name</label></td>
+                            <td><input type="text" name="b_name" required [(ngModel)]="brand.name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Brand Logo Url</label></td>
+                            <td><input type="url" name="b_image" required [(ngModel)]="brand.image"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Submit"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

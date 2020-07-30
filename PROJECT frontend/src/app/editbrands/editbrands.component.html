@@ -1,0 +1,11 @@
+<h3>Select brand to edit:</h3>
+<div class="row row-cols-1 row-cols-md-6">
+    <div class="col mb-4" *ngFor='let brand of brands'>
+        <div class="card h-100" (click)="edit(brand)">
+            <img src="{{brand.image}}" class="card-img-top" alt="...">
+            <!-- <a class="stretched-link" (click)="editBrand(brand)"> -->
+                <h6>{{brand.name}}</h6>
+            <!-- </a> -->
+        </div>
+    </div>
+</div>
