@@ -142,7 +142,18 @@ app.get('/cars/:id',function(req,res){
     });
 })
 
+app.get('/brandcars/:name',function(req,res){
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    Cardata.find({brand:req.params.name})
+    .then(function(car){
+        res.send(car);
+    });
+})
+
 app.post('/users/login',function(req,res){
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
     var email = req.body.user.email;
     var password = req.body.user.password;
     Accountdata.findOne({email:email},function(err,user){

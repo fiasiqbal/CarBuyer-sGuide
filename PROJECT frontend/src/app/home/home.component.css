@@ -1,0 +1,13 @@
+.card{
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+}
+.row:hover{
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+    cursor:pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}

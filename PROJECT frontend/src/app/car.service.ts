@@ -41,4 +41,7 @@ export class CarService {
   deleteCar(id){
     return this.http.delete("http://localhost:3000/cars/delete/"+id);
   }
+  getBrandCars(brand){
+    return this.http.get("http://localhost:3000/brandcars/"+brand);
+  }
 }

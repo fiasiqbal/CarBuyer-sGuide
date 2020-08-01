@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       if (data.status==401) {
         alert("Wrong email/password");
       } else if (data.status==200) {
+        alert("Welcome");
         this.router.navigate(['/']);
       }
     });
