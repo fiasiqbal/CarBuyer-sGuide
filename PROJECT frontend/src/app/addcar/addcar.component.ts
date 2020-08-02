@@ -12,7 +12,7 @@ export class AddcarComponent implements OnInit {
 
   constructor(private carService:CarService,private router:Router) { }
   brands;
-  car = new CarsModel(null,null,null);
+  car = new CarsModel(null,null,null,null);
   ngOnInit(): void {
     this.carService.getBrands().subscribe((data)=>{
       this.brands = JSON.parse(JSON.stringify(data));

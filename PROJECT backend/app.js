@@ -46,7 +46,7 @@ app.post('/cars/insert', function(req,res){
     var car = {
         brand : req.body.car.brand,
         name : req.body.car.name,
-        // price : req.body.car.price,
+        price : req.body.car.price,
         // mileage : req.body.car.mileage,
         // fuel : req.body.car.fuel,
         // engine : req.body.car.engine,
@@ -82,7 +82,7 @@ app.put('/cars/edit',function(req,res){
     var car = {
         brand : req.body.car.brand,
         name : req.body.car.name,
-        // price : req.body.car.price,
+        price : req.body.car.price,
         // mileage : req.body.car.mileage,
         // fuel : req.body.car.fuel,
         // engine : req.body.car.engine,
@@ -137,6 +137,15 @@ app.get('/cars/:id',function(req,res){
     res.header('Access-Control-Allow-Origin','*');
     res.header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
     Cardata.findById(req.params.id)
+    .then(function(car){
+        res.send(car);
+    });
+})
+
+app.get('/car/:name',function(req,res){
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    Cardata.findOne({name:req.params.name})
     .then(function(car){
         res.send(car);
     });

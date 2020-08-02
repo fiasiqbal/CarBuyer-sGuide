@@ -1,1 +1,20 @@
-<p>singlecar works!</p>
+<h3>{{car.name}}</h3>
+
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-5">
+            <img src="{{car.image}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <h5 *ngIf="car.price!=null">₹ {{car.price}} lakhs</h5>
+                        <h5 *ngIf="car.price==null">Price: NA</h5>
+                    </li>
+                </ul>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,9 @@ export class CarService {
   getCar(id){
     return this.http.get("http://localhost:3000/cars/"+id);
   }
+  Car(name){
+    return this.http.get("http://localhost:3000/car/"+name);
+  }
   addCar(item){
     return this.http.post("http://localhost:3000/cars/insert",{"car":item})
     .subscribe((data)=>{console.log(data)});

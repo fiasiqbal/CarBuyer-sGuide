@@ -23,11 +23,11 @@
                             <td><label for="">Model Name</label></td>
                             <td><input type="text" name="name" required [(ngModel)]="car.name"></td>
                         </tr>
-                        <!-- <tr>
-                            <td><label for="">Price</label></td>
-                            <td><input type="number" name="price" required [(ngModel)]="car.price"></td>
-                        </tr>
                         <tr>
+                            <td><label for="">Price (in ₹ Lakhs)</label></td>
+                            <td><input type="number" step="0.01" name="price" required [(ngModel)]="car.price"></td>
+                        </tr>
+                        <!-- <tr>
                             <td><label for="">Fuel Economy</label></td>
                             <td><input type="number" name="mileage" required [(ngModel)]="car.mileage"></td>
                         </tr>

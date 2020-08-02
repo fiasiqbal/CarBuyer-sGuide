@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const CarSchema = new Schema({
     brand: String,
     name: String,
-    // price: Number,
+    price: Number,
     // mileage: Number,
     // fuel: String,
     // engine: Number,

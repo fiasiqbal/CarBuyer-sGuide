@@ -20,4 +20,8 @@ export class SinglebrandComponent implements OnInit {
     });
   }
 
+  SingleCar(car){
+    var name = car.name;
+    this.router.navigate(["cars/singlecar/"+name]);
+  }
 }
